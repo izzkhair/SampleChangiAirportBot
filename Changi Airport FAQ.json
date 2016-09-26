@@ -1,0 +1,3198 @@
+{
+  "luis_schema_version": "1.3.0",
+  "name": "Changi Airport FAQ Final",
+  "desc": "Changi Airport FAQ Final",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "BaggageStorage"
+    },
+    {
+      "name": "BreastMilk"
+    },
+    {
+      "name": "CheckAirline"
+    },
+    {
+      "name": "EnterSingapore"
+    },
+    {
+      "name": "FlightInformation"
+    },
+    {
+      "name": "GoOtherTerminal"
+    },
+    {
+      "name": "HotelAirport"
+    },
+    {
+      "name": "ImagesTerminal"
+    },
+    {
+      "name": "LostBelonging"
+    },
+    {
+      "name": "MapTerminal"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "ParkingCharges"
+    },
+    {
+      "name": "RestrictionsOfItem"
+    },
+    {
+      "name": "SingaporeTour"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Flight"
+    },
+    {
+      "name": "Location"
+    },
+    {
+      "name": "PassengerItems"
+    },
+    {
+      "name": "RestrictedItems"
+    },
+    {
+      "name": "Transport"
+    }
+  ],
+  "composites": [],
+  "bing_entities": [
+    "datetime"
+  ],
+  "actions": [
+    {
+      "actionName": "MapTerminal",
+      "intentName": "MapTerminal",
+      "actionParameters": [
+        {
+          "parameterName": "terminal",
+          "entityName": "Location",
+          "required": true
+        }
+      ]
+    },
+    {
+      "actionName": "FlightInformation",
+      "intentName": "FlightInformation",
+      "actionParameters": [
+        {
+          "parameterName": "FlightNumber",
+          "entityName": "Flight",
+          "required": true
+        }
+      ]
+    },
+    {
+      "actionName": "ImagesTerminal",
+      "intentName": "ImagesTerminal",
+      "actionParameters": [
+        {
+          "parameterName": "Terminal",
+          "entityName": "Location",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "i need to check something with my airline; do you have a list of their contact details",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 7,
+          "endPos": 7
+        },
+        {
+          "entity": "Flight",
+          "startPos": 13,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "i have to check-in at a transfer counter in a terminal different from the one i landed in. how do i get there if i do not clear customs & immigration?",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 9,
+          "endPos": 9
+        },
+        {
+          "entity": "Location",
+          "startPos": 12,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "will i be able to enter singapore during my transit at changi airport?",
+      "intent": "EnterSingapore",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "Location",
+          "startPos": 11,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "are there any restrictions on items that i can bring on board an aircraft?",
+      "intent": "RestrictionsOfItem",
+      "entities": []
+    },
+    {
+      "text": "i lost one of my belongings at the airport. how do i know whether it was retrieved or not?",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "how much are the parking charges?",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "is there a place for me to leave my luggage while i walk around the airport or in the city?",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 9,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "i am a transfer passenger; do you have any hotel facilities within the airport?",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 10,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "my baby is not travelling with me. am i allowed to bring my breast milk onboard?",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 15,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "i would like to join the free singapore tour. do i need a visa?",
+      "intent": "SingaporeTour",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 14,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "what time is my flight?",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "what time is my flight tz08677",
+      "intent": "FlightInformation",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "enter singapore",
+      "intent": "EnterSingapore",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "bring durian onboard",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "RestrictedItems",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "can i bring durian onboard",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "RestrictedItems",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "is durian allowed onboard",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "RestrictedItems",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "can i eat durian onboard",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "RestrictedItems",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "visit singapore",
+      "intent": "EnterSingapore",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "what time is my flight tr2066",
+      "intent": "FlightInformation",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "what time is my flight qz507",
+      "intent": "FlightInformation",
+      "entities": []
+    },
+    {
+      "text": "what time is my flight cx734",
+      "intent": "FlightInformation",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "what time is my flight",
+      "intent": "FlightInformation",
+      "entities": []
+    },
+    {
+      "text": "enter singapore during transit",
+      "intent": "EnterSingapore",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "entrance to singapore during transit",
+      "intent": "EnterSingapore",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "explore singapore for awhile during transit",
+      "intent": "EnterSingapore",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "go to singapore during transit",
+      "intent": "EnterSingapore",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "enjoy singapore during transit",
+      "intent": "EnterSingapore",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "have a taste of singapore during transit",
+      "intent": "EnterSingapore",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "tour around singapore during transit",
+      "intent": "EnterSingapore",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "need visa to visit singapore",
+      "intent": "EnterSingapore",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "check in at other terminal. how to get there",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "how to get to other terminal for check in",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "check in and explore other terminal",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "how to get to ther terminal",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "visit other terminal",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "go to other terminals",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "go to shops in other terminal",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "try other terminal",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "must i clear custom to visit other terminal",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "must i clear immigration to visit other terminal",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "how do i get to other terminal",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "need to go through customs to visit other terminal",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 4,
+          "endPos": 4
+        },
+        {
+          "entity": "Location",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "need visa to visit other terminals",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 1,
+          "endPos": 1
+        },
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "my check in counter is at terminal 3 how to get there",
+      "intent": "GoOtherTerminal",
+      "entities": []
+    },
+    {
+      "text": "my check in counter is at terminal 3 how do i get there",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 1,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "my check in counter is at terminal 2 how do i get there",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 1,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "my check in counter is at terminal 1 how do i get there",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 1,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "can i take the train to go to other terminal",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 4,
+          "endPos": 4
+        },
+        {
+          "entity": "Location",
+          "startPos": 9,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "can i take the skytrain to go to other terminal",
+      "intent": "GoOtherTerminal",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 4,
+          "endPos": 4
+        },
+        {
+          "entity": "Location",
+          "startPos": 9,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "what can i bring on the aircarft",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "what is allowed on a aircraft",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "what is allowed on the plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "can i bring weapons on the plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "guns on plane allowed",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "can i bring guns and explosives on the plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 8,
+          "endPos": 8
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "what are the dangerous goods not allowed on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "RestrictedItems",
+          "startPos": 3,
+          "endPos": 4
+        },
+        {
+          "entity": "Location",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "what are the dangerous goods not allowed on aircraft",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 8,
+          "endPos": 8
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "can i bring toy guns onboard",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "RestrictedItems",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "can i bring toy guns on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "play with toy guns on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "is fireworks allowed to be brought on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 7,
+          "endPos": 7
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "aerosols brought on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "flammable materials on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "paint on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "poisons on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "radioactive materials on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "pesticides insecticides fire lighters on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 0,
+          "endPos": 0
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 1,
+          "endPos": 1
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "batteries on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "tear gas on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "bring petrol on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "magnets on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "toxic on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "gun caps on plane",
+      "intent": "RestrictionsOfItem",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "phone number for my airline",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "what is my airline",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "how do i contact my airline",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "where is my airline located",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Flight",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "how do i communicate with my airline",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "i want to talk to my airline",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "get flight details from my airline",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "talk to the airline staff",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Flight",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "how do i visit my airline counter",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "how do i visit my airline office",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "list of airline in changi",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "Location",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "talk to my airline",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "complain about airline staff",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "check with my airline",
+      "intent": "CheckAirline",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "lost my belonging in the airport",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "get my lost items back",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "i lost my baggage and luggage",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "PassengerItems",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "help me find my lost luggage and bag at the airport",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "PassengerItems",
+          "startPos": 7,
+          "endPos": 7
+        },
+        {
+          "entity": "Location",
+          "startPos": 10,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "please help me get my bags back",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "i think i left my bag at the airport",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "Location",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "get back lost bags baggage and luggage",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "PassengerItems",
+          "startPos": 4,
+          "endPos": 4
+        },
+        {
+          "entity": "PassengerItems",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "retieve my lost luggages",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "i want my lost bags back",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "i want my lost luggage back",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "left my luggage at the airport",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "i dont know where i my luggage",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "get back my luggage",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "get back my bags",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "lost my belongings",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "lost my items",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "how to get back my stuff",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "how much does it cost to park my vehicle",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "where do i park my car",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "i want to park my car but how much is it",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "how much does the parking cost",
+      "intent": "ParkingCharges",
+      "entities": []
+    },
+    {
+      "text": "car park charges",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "parking slot charges",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "terminal parking for cars prices",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "where do i park at terminal 1",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "where do i park at terminal 2",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "where do i park at terminal 3",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "i want to park my car",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "car park fees for my car",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "parking fees for my motorcycle",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 4,
+          "endPos": 4
+        },
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "how much to park my lorry",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "cost of parking",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "cost of parking changi airport",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "grace period for parking",
+      "intent": "ParkingCharges",
+      "entities": []
+    },
+    {
+      "text": "parking for my car",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "how much for parking",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "is the parking expensive",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "is the parking affordable",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "park my car safely",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "park my van at changi airport",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "Location",
+          "startPos": 4,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "where can i park my motor",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "how much does the parking for motorcycle",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Transport",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "Location",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "parking free at changi",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "do i need to pay for parking",
+      "intent": "ParkingCharges",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "i want to be able to keep luggage",
+      "intent": "BaggageStorage",
+      "entities": []
+    },
+    {
+      "text": "where can i store my luggage",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "store my bags",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "how much my i pay to keep my bags",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "lockers for bags",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "keep my bag safely",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "keep my items save while i walk",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "lock up my items while i explore changi",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "lock my luggage while i explore changi",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "lock my luggage while i explore the terminal",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "Location",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "lock my bags while i walk around terminal",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "Location",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "dont want to carry my bags around",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "pay to store my luggage",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "where to keep luggage",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "where to keep my stuff",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "store my baggage",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "keep my luggage",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "facilities for storing bags",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "where are the left baggage counters",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "left my baggage at a counter while i walk",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "left my baggage at a counter while i explore changi",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "Location",
+          "startPos": 9,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "which terminal can i store my baggage",
+      "intent": "BaggageStorage",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "Location",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "hotel within the airport",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 0
+        },
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "is there a hotel near the airport",
+      "intent": "LostBelonging",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "hotel for transit passengers",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "hotel in the terminal im transiting",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 0
+        },
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "are there hotels at the terminal",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "stay at hotel during flight transit",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "location of hotel for transit passengers",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "i am transiting and i want to stay in a hotel",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 7,
+          "endPos": 7
+        },
+        {
+          "entity": "Location",
+          "startPos": 10,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "i have no visa but i want to stay in a hotel",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 11,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "sleep overnight at a hotel",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "stay and sleep at a hotel",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "my terminal got hotel",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 1,
+          "endPos": 1
+        },
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "nap at a hotel in the airport",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "no visa but i want sleep at hotel",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 1,
+          "endPos": 1
+        },
+        {
+          "entity": "Location",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "any hotel at the airport",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 1,
+          "endPos": 1
+        },
+        {
+          "entity": "Location",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "where is the hotel in the airport",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "can i bring breast milk",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "store breast milk and travel",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 1,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "travel with breast milk",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "bring breast milk onboard",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 1,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "how much breast milk can i bring onboard",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "breast milk bring on plane",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 4,
+          "endPos": 4
+        },
+        {
+          "entity": "PassengerItems",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "brought breast milk",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 1,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "how to store breast milk",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "put breast milk in containers",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 1,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "how much breast milk can i bring",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "do i need to declare if i bring breast milk",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 8,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "immigration allow breast milk",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "security allow breast milk",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "will they check my breast milk",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 4,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "what is maximum capacity of breast milk",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 5,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "bring breast milk on plane",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 4,
+          "endPos": 4
+        },
+        {
+          "entity": "PassengerItems",
+          "startPos": 1,
+          "endPos": 2
+        },
+        {
+          "entity": "RestrictedItems",
+          "startPos": 1,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "bring breast milk on aircarft",
+      "intent": "BreastMilk",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 4,
+          "endPos": 4
+        },
+        {
+          "entity": "PassengerItems",
+          "startPos": 1,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "i want to go for a free tour of singapore need visa",
+      "intent": "SingaporeTour",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 11,
+          "endPos": 11
+        },
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 9,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "visa for singapore tour",
+      "intent": "SingaporeTour",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 0,
+          "endPos": 0
+        },
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "singapore tour need visa",
+      "intent": "SingaporeTour",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "free singapore tour can i get out of terminal",
+      "intent": "SingaporeTour",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 1,
+          "endPos": 2
+        },
+        {
+          "entity": "Location",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "go for a free tour around singapore",
+      "intent": "SingaporeTour",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "visa need for tour around singapore",
+      "intent": "SingaporeTour",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "do i need visa for tour around singapore",
+      "intent": "SingaporeTour",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "singapore tour visa",
+      "intent": "SingaporeTour",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "i have got no visa can i go for singapore tour",
+      "intent": "SingaporeTour",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 4,
+          "endPos": 4
+        },
+        {
+          "entity": "Location",
+          "startPos": 9,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "i want to go for singapore tour",
+      "intent": "SingaporeTour",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "singapore tour without visa",
+      "intent": "SingaporeTour",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "free tour around singapore without visa",
+      "intent": "SingaporeTour",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "free singapore tour need visa",
+      "intent": "SingaporeTour",
+      "entities": [
+        {
+          "entity": "PassengerItems",
+          "startPos": 4,
+          "endPos": 4
+        },
+        {
+          "entity": "Location",
+          "startPos": 1,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "flight time for flight tz4006",
+      "intent": "FlightInformation",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "for flight number tz2066 what time is my flight",
+      "intent": "FlightInformation",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "i want to know my flight timing for flight tz3066",
+      "intent": "FlightInformation",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 9,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "time to fly for flight tz3066",
+      "intent": "FlightInformation",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "what time do i need to fly for flight tz2066",
+      "intent": "FlightInformation",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 9,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "time to fly flight 2066",
+      "intent": "FlightInformation",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "what time do i need to be at the airport for flight tz2066",
+      "intent": "FlightInformation",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 12,
+          "endPos": 12
+        },
+        {
+          "entity": "Location",
+          "startPos": 9,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "take off flight tz2066",
+      "intent": "FlightInformation",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "schleduled time for flight tz2066",
+      "intent": "FlightInformation",
+      "entities": [
+        {
+          "entity": "Flight",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "where to live",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "try new stuff",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i dont know what to do",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how to enjoy life",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "go to malaysia",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "play around",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "why singapore so boring",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "testing",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "are you there",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "hello bot",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how you doing",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where to keep myself occupied",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "learn new stuff",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "singapore so expensive",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "show map of terminal 1",
+      "intent": "MapTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "show map of terminal 2",
+      "intent": "MapTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "show map of terminal 3",
+      "intent": "MapTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "terminal 1 map",
+      "intent": "MapTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "terminal 2 map",
+      "intent": "MapTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "terminal 3 map",
+      "intent": "MapTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "show me the map",
+      "intent": "MapTerminal",
+      "entities": []
+    },
+    {
+      "text": "show map terminal 1",
+      "intent": "MapTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "i want to see map of terminal 1",
+      "intent": "MapTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "map of terminal 1",
+      "intent": "MapTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "show me terminal 1 map",
+      "intent": "MapTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "i want terminal 1 map",
+      "intent": "MapTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "map of terminal 2",
+      "intent": "MapTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "map of terminal 3",
+      "intent": "MapTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "i want map of terminal 3",
+      "intent": "MapTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 4,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "show images of terminal 1",
+      "intent": "ImagesTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "show images of terminal 2",
+      "intent": "ImagesTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "show me photos of terminal 2",
+      "intent": "ImagesTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 4,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "how does terminal 2 looks like",
+      "intent": "ImagesTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "i want to see image of terminal 2",
+      "intent": "ImagesTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "terminal 2 photos",
+      "intent": "ImagesTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "terminal 2 pictures",
+      "intent": "ImagesTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "i want to see photos of terminal 3",
+      "intent": "ImagesTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 6,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "i want to see how terminal 3 look like",
+      "intent": "ImagesTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "give me images of terminal 2",
+      "intent": "ImagesTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 4,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "give me me photos of terminal 1",
+      "intent": "ImagesTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 5,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "terminal 1 photos",
+      "intent": "ImagesTerminal",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "hotel near airport",
+      "intent": "HotelAirport",
+      "entities": [
+        {
+          "entity": "Location",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "i want to go to malaysia",
+      "intent": "LostBelonging",
+      "entities": []
+    }
+  ]
+}
