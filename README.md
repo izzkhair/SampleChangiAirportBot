@@ -4,10 +4,10 @@ This is a Changi Airport Bot that could be use for Learning Purposes ONLY.
 Please do not use these code for production or industrial purposes.I am not reponsible for any damage cause to you or your company upon using my code.
 The code and chatbot have no Asscociation to Changi Airport. It is build based on my own interest and freewill
 
-Alright. Here are the steps to <b>Get Started</b>:)
+<h3>Alright. Here are the steps to Get Started:)</h3>
 
 1)Download as a ZIP or Clone the repo<br /><br />
-2)Open up the project by clicking on the solution file<br /><br />
+2)Open up the project in visual studio "FirstBotApplication" project by clicking on the solution file<br /><br />
 3)Go to the WEB.CONFIG to enter your own Bot ID(AKA BotHandler),APP ID and App Password<br /><br />
 4)Go to LUIS.AI and click on import exisiting application<br /><br />
 5)Then set file path to the "ChangiAirportFAQ.json" file that is found in the repo<br /><br />
