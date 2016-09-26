@@ -13,7 +13,7 @@ namespace FirstBotApplication
     [Serializable]
     public class AllTheBot:LuisDialog<object>
     {
-
+       
         public static string results="";
         [LuisIntent("BaggageStorage")]
         public async Task BaggageStorage(IDialogContext context, LuisResult result)
