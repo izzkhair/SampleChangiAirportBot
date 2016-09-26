@@ -11,7 +11,7 @@ Alright. Here are the steps to <b>Get Started</b>:)
 3)Go to the WEB.CONFIG to enter your own Bot ID(AKA BotHandler),APP ID and App Password<br /><br />
 4)Go to LUIS.AI and click on import exisiting application<br /><br />
 5)Then set file path to the "ChangiAirportFAQ.json" file that is found in the repo<br /><br />
------ THIS WOULD ALLOW YOU USE THE SAME UTTERANCES,INTENTS AND ENTITIES THAT I HAVE CREATED-----<br /><br />
+<b>--THIS WOULD ALLOW YOU USE THE SAME UTTERANCES,INTENTS AND ENTITIES THAT I HAVE CREATED--</b><br /><br />
 6)Once you have your luis app created, Go to "AllTheBot.cs" file and enter your own LUIS ID and Subscription Key(Found at the top of the code)<br /><br />
 7)You can now publish this bot as a web service. Dont forget to change your Messaging Endpoint in Botframework<br /><br />
 8) Congratulation. Your Bot is now LIVE and you can connect it to various communication channel available.<br /><br />
