@@ -16,7 +16,7 @@ The code and chatbot have no Asscociation to Changi Airport. It is build based o
 7)You can now publish this bot as a web service. Dont forget to change your Messaging Endpoint in Botframework<br /><br />
 8) Congratulation. Your Bot is now LIVE and you can connect it to various communication channel available.<br /><br />
 
-<b>Feel free to raise an issue if you would like me to clear your doubts or answer your questions</b>
+<H3>Feel free to raise an issue if you would like me to clear your doubts or answer your questions</H3>
 
 
 
